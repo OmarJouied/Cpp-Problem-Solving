@@ -1,2 +1,2 @@
 # Cpp-Problem-Solving
-This repository made for solving problems using C++ in Visual Studio IDE
+This repository made for solving problems using C++ in Visual Studio Community Edition 2026 IDE
