@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int Pennies, Nickels, Dimes, Quaters, Dollars, TotalPennies;
+    int Pennies, Nickels, Dimes, Quarters, Dollars, TotalPennies;
 
     cout << "Enter Your Pennies?\n";
     cin >> Pennies;
@@ -15,12 +15,12 @@ int main()
     cin >> Dimes;
 
     cout << "Enter Your Quaters?\n";
-    cin >> Quaters;
+    cin >> Quarters;
 
     cout << "Enter Your Dollars?\n";
     cin >> Dollars;
 
-    TotalPennies = Pennies + Nickels * 5 + Dimes * 10 + Quaters * 25 + Dollars * 100;
+    TotalPennies = Pennies + Nickels * 5 + Dimes * 10 + Quarters * 25 + Dollars * 100;
 
     cout << TotalPennies << " Pennies\n" << TotalPennies / 100 << " Dollars" << endl;
 
