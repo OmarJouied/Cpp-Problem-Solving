@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cmath>
+
 using namespace std;
 
 int main()
@@ -10,7 +12,7 @@ int main()
     cout << "Enter the circle diameter ?\n";
     cin >> Diameter;
 
-    Area = PI * Diameter * Diameter / 4;
+    Area = ceil(PI * pow(Diameter, 2) / 4);
 
     cout << "\nCircle Area = " << Area << endl;
 
