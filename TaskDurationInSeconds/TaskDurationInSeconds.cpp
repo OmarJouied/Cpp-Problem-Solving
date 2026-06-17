@@ -1,10 +1,12 @@
 #include <iostream>
+#include <cmath>
+
 using namespace std;
 
 int main()
 {
     int Days, Hours, Minutes, Seconds;
-    const int SecondsPerMinute = 60, SecondsPerHour = 60 * 60, SecondsPerDay = 60 * 60 * 24;
+    const int SecondsPerMinute = 60, SecondsPerHour = pow(SecondsPerMinute, 2), SecondsPerDay = SecondsPerHour * 24;
 
     cout << "Enter Days?\n";
     cin >> Days;
