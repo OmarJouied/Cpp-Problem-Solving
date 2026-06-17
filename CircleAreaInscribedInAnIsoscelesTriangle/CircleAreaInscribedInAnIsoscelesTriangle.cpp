@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cmath>
+
 using namespace std;
 
 int main()
@@ -13,7 +15,7 @@ int main()
 	cout << "Enter B?\n";
 	cin >> base;
 
-	Area = PI * base * base / 4 * (2 * leg - base) / (2 * leg + base);
+	Area = floor(PI * pow(base, 2) / 4 * (2 * leg - base) / (2 * leg + base));
 
 	cout << "Circle Area = " << Area << endl;
 
