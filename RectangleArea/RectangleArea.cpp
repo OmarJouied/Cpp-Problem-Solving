@@ -1,6 +1,11 @@
 #include <iostream>
 using namespace std;
 
+int calculateRectangleArea(int width, int height)
+{
+    return width * height;
+}
+
 int main()
 {
     int length, width, area;
@@ -11,7 +16,7 @@ int main()
     cout << "Enter the width ?\n";
     cin >> width;
 
-    area = length * width;
+    area = calculateRectangleArea(width, length);
 
     cout << "Rectangle Area = " << area << endl;
 
