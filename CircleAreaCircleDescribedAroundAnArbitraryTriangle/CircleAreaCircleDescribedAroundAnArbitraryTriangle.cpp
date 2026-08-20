@@ -3,10 +3,16 @@
 
 using namespace std;
 
+double CircleAreaCircleDescribedAroundAnArbitraryTriangle(int A, int B, int C)
+{
+    const double PI = 3.14, P = (A + B + C) / 2;
+
+    return PI * pow(A * B * C / (4 * sqrt(P * (P - A) * (P - B) * (P - C))), 2);
+}
+
 int main()
 {
     int A, B, C;
-    const double PI = 3.14;
     double P, Area;
 
     cout << "Please enter the value of A?\n";
@@ -18,8 +24,7 @@ int main()
     cout << "Please enter the value of C?\n";
     cin >> C;
 
-    P = (A + B + C) / 2;
-    Area = round(PI * pow(A * B * C / (4 * sqrt(P * (P - A) * (P - B) * (P - C))), 2));
+    Area = CircleAreaCircleDescribedAroundAnArbitraryTriangle(A, B, C);
 
     cout << "Circle Area = " << Area << endl;
 
