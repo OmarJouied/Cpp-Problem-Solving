@@ -3,16 +3,22 @@
 
 using namespace std;
 
-int main()
+double CircleArea(int CircleRay)
 {
     const float PI = 3.14;
+
+    return ceil(PI * pow(CircleRay, 2));
+}
+
+int main()
+{
     int CircleRay;
     double Area;
 
     cout << "Enter the Circle Ray?\n";
     cin >> CircleRay;
 
-     Area = ceil(PI * pow(CircleRay, 2));
+     Area = CircleArea(CircleRay);
 
     cout << "\nCircle Area = " << Area << endl;
 
