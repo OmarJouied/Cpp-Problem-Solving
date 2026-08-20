@@ -1,12 +1,9 @@
 #include <iostream>
 using namespace std;
 
-int main()
+void SecondsToDaysHoursMinutesSeconds(int Seconds)
 {
-    int Seconds, Minutes, Hours, Days, Remainder;
-
-    cout << "Enter the number of seconds?\n";
-    cin >> Seconds;
+    int Minutes, Hours, Days, Remainder;
 
     Days = Seconds / 24 / 3600;
     Remainder = Seconds % (24 * 3600);
@@ -19,6 +16,16 @@ int main()
     Seconds = Remainder % 60;
 
     cout << Days << ":" << Hours << ":" << Minutes << ":" << Seconds << endl;
+}
+
+int main()
+{
+    int Seconds;
+
+    cout << "Enter the number of seconds?\n";
+    cin >> Seconds;
+
+    SecondsToDaysHoursMinutesSeconds(Seconds);
 
     return 0;
 }
