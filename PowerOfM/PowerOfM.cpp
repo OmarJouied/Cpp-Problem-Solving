@@ -3,6 +3,11 @@
 
 using namespace std;
 
+void PowerOfM(int Number, int Power)
+{
+    cout << Number << " ^ " << Power << " = " << pow(Number, Power) << endl;
+}
+
 int main()
 {
     int Number, Power;
@@ -13,7 +18,7 @@ int main()
     cout << "Please enter a Power?\n";
     cin >> Power;
     
-    cout << Number << " ^ " << Power << " = " << pow(Number, Power) << endl;
+    PowerOfM(Number, Power);
 
     return 0;
 }
