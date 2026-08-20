@@ -3,6 +3,11 @@
 
 using namespace std;
 
+double calculateRectangleAreaThroughDiagonalAndSideArea(double width, double diagonal)
+{
+    return width * sqrt(pow(diagonal, 2) - pow(width, 2));
+}
+
 int main()
 {
     double width, diagonal, area;
@@ -13,7 +18,7 @@ int main()
     cout << "Please enter the diagonal?\n";
     cin >> diagonal;
 
-    area = width * sqrt(pow(diagonal, 2) - pow(width, 2));
+    area = calculateRectangleAreaThroughDiagonalAndSideArea(width, diagonal);
 
     cout << "Rectangle Area = " << area << endl;
 
