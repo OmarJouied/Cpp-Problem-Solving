@@ -3,10 +3,16 @@
 
 using namespace std;
 
+int CalculateTaskDurationInSeconds(int Days, int Hours, int Minutes, int Seconds)
+{
+    const int SecondsPerMinute = 60, SecondsPerHour = pow(SecondsPerMinute, 2), SecondsPerDay = SecondsPerHour * 24;
+    
+    return Days * SecondsPerDay + Hours * SecondsPerHour + Minutes * SecondsPerMinute + Seconds;
+}
+
 int main()
 {
     int Days, Hours, Minutes, Seconds;
-    const int SecondsPerMinute = 60, SecondsPerHour = pow(SecondsPerMinute, 2), SecondsPerDay = SecondsPerHour * 24;
 
     cout << "Enter Days?\n";
     cin >> Days;
@@ -20,7 +26,7 @@ int main()
     cout << "Enter Seconds?\n";
     cin >> Seconds;
 
-    cout << endl << Days * SecondsPerDay + Hours * SecondsPerHour + Minutes * SecondsPerMinute + Seconds << " Seconds" << endl;
-
+    cout << endl << CalculateTaskDurationInSeconds(Days, Hours, Minutes, Seconds) << " Seconds" << endl;
+    
     return 0;
 }
