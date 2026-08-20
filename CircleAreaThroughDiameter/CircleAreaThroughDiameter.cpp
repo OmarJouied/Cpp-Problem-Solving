@@ -3,16 +3,22 @@
 
 using namespace std;
 
-int main()
+double CircleAreaThroughDiameter(int Diameter)
 {
     const float PI = 3.14;
+
+    return ceil(PI * pow(Diameter, 2) / 4);
+}
+
+int main()
+{
     int Diameter;
     float Area;
 
     cout << "Enter the circle diameter ?\n";
     cin >> Diameter;
 
-    Area = ceil(PI * pow(Diameter, 2) / 4);
+    Area = CircleAreaThroughDiameter(Diameter);
 
     cout << "\nCircle Area = " << Area << endl;
 
