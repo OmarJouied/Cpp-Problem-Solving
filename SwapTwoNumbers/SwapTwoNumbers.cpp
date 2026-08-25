@@ -1,9 +1,18 @@
 #include <iostream>
 using namespace std;
 
-void SwapTwoNumbers()
+void SwapTwoNumbers(int &Num1, int &Num2)
 {
-    int Num1, Num2, tmp;
+    int tmp;
+
+    tmp = Num1;
+    Num1 = Num2;
+    Num2 = tmp;
+}
+
+int main()
+{
+    int Num1, Num2;
 
     cout << "Enter Number 1?\n";
     cin >> Num1;
@@ -11,18 +20,11 @@ void SwapTwoNumbers()
     cout << "Enter Number 2?\n";
     cin >> Num2;
 
-    cout << Num1 << "\n" << Num2 << "\n" << endl;
+    cout << "Num1 = " << Num1 << ", " << "Num2 = " << Num2 << "\n" << endl;
 
-    tmp = Num1;
-    Num1 = Num2;
-    Num2 = tmp;
+    SwapTwoNumbers(Num1, Num2);
 
-    cout << Num1 << "\n" << Num2 << endl;
-}
-
-int main()
-{
-    SwapTwoNumbers();
+    cout << "Num1 = " << Num1 << ", " << "Num2 = " << Num2 << "\n" << endl;
 
     return 0;
 }
