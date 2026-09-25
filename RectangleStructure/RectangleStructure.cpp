@@ -22,15 +22,38 @@ void PrintRectangle(stRectangle R)
     cout << "length = " << R.length << endl;
 }
 
+float CalculateRectangleArea(stRectangle Rectangle)
+{
+    return Rectangle.length * Rectangle.width;
+}
+
+void ReadRectangles(stRectangle Rectangles[3])
+{
+    ReadRectangle(Rectangles[0]);
+    ReadRectangle(Rectangles[1]);
+    ReadRectangle(Rectangles[2]);
+}
+
+void PrintRectangles(stRectangle Rectangles[3])
+{
+    PrintRectangle(Rectangles[0]);
+    PrintRectangle(Rectangles[1]);
+    PrintRectangle(Rectangles[2]);
+}
+
+float CalculateTotalRectanglesArea(stRectangle Rectangles[3])
+{
+    return CalculateRectangleArea(Rectangles[0]) + CalculateRectangleArea(Rectangles[1]) + CalculateRectangleArea(Rectangles[2]);
+}
+
 int main()
 {
-    stRectangle Rectangle1, Rectangle2;
+    stRectangle Rectangles[3];
 
-    ReadRectangle(Rectangle1);
-    PrintRectangle(Rectangle1);
+    ReadRectangles(Rectangles);
+    PrintRectangles(Rectangles);
 
-    ReadRectangle(Rectangle2);
-    PrintRectangle(Rectangle2);
+    cout << "Total Rectangle Area: " << CalculateTotalRectanglesArea(Rectangles) << endl;
 
     return 0;
 }
