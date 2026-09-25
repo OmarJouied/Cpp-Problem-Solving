@@ -51,12 +51,31 @@ void PrintEmployee(stEmployee Employee)
     cout << "********************\n";
 }
 
+void ReadEmployees(stEmployee Employees[2])
+{
+    ReadEmployee(Employees[0]);
+    ReadEmployee(Employees[1]);
+}
+
+void PrintEmployees(stEmployee Employees[2])
+{
+    PrintEmployee(Employees[0]);
+    PrintEmployee(Employees[1]);
+}
+
+float CalculateTotalSalary(stEmployee Employees[2])
+{
+    return Employees[0].Salary + Employees[1].Salary;
+}
+
 int main()
 {
-    stEmployee Employee;
+    stEmployee Employees[2];
 
-    ReadEmployee(Employee);
-    PrintEmployee(Employee);
+    ReadEmployees(Employees);
+    PrintEmployees(Employees);
+
+    cout << "Total Salary: " << CalculateTotalSalary(Employees) << endl;
 
     return 0;
 }
