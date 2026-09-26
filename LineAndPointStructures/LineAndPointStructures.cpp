@@ -23,6 +23,12 @@ void PrintPoint(stPoint Point)
     cout << "(" << Point.X << ", " << Point.Y << ")" << endl;
 }
 
+void ShiftPoint(stPoint& Point, int dX, int dY)
+{
+    Point.X += dX;
+    Point.Y += dY;
+}
+
 struct stLine
 {
     stPoint StartPoint;
@@ -41,19 +47,39 @@ void PrintLine(stLine& Line)
     PrintPoint(Line.EndPoint);
 }
 
-double LengthOfLine(stLine Line)
+void ShiftLine(stLine& Line, int dX, int dY)
 {
-    return sqrt(pow(Line.StartPoint.Y - Line.EndPoint.Y, 2) + pow(Line.StartPoint.X - Line.EndPoint.X, 2));
+    ShiftPoint(Line.StartPoint, dX, dY);
+    ShiftPoint(Line.EndPoint, dX, dY);
+}
+
+void ReadLines(stLine Lines[2])
+{
+    ReadLine(Lines[0]);
+    ReadLine(Lines[1]);
+}
+
+void ShiftLines(stLine Lines[2], int dX, int dY)
+{
+    ShiftLine(Lines[0], dX, dY);
+    ShiftLine(Lines[1], dX, dY);
+}
+
+void PrintLines(stLine Lines[2])
+{
+    PrintLine(Lines[0]);
+    PrintLine(Lines[1]);
 }
 
 int main()
 {
-    stLine Line;
+    stLine Lines[2];
 
-    ReadLine(Line);
-    PrintLine(Line);
+    ReadLines(Lines);
+    PrintLines(Lines);
 
-    cout << "Length of Line = " << LengthOfLine(Line);
+    ShiftLines(Lines, 3, 5);
+    PrintLines(Lines);
 
     return 0;
 }
