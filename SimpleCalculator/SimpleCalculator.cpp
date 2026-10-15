@@ -16,21 +16,22 @@ int main()
     cout << "Please enter Operation Type?\n";
     cin >> OperationType;
 
-    if (OperationType == '+')
-    {
+    switch (OperationType) {
+    case '+':
         Result = Number1 + Number2;
-    }
-    else if (OperationType == '-')
-    {
+        break;
+    case '-':
         Result = Number1 - Number2;
-    }
-    else if (OperationType == '*')
-    {
+        break;
+    case '*':
         Result = Number1 * Number2;
-    }
-    else
-    {
+        break;
+    case '/':
         Result = double(Number1) / Number2;
+        break;
+    default:
+        cout << "Bad Operator!" << endl;
+        Result = 0;
     }
 
     cout << "Result: " << Result << endl;
