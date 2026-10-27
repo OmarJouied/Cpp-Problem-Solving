@@ -4,9 +4,11 @@ using namespace std;
 
 void Print1ToN(int Number)
 {
-    for (int i = 1; i <= Number; i++)
+    int i = 1;
+    while (i <= Number)
     {
         cout << i << endl;
+        i++;
     }
 }
 
