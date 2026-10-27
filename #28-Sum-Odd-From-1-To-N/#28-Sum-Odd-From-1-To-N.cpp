@@ -4,11 +4,13 @@ using namespace std;
 int SumOddFrom1ToN(int Number)
 {
     int Sum = 0;
-    for (int i = 1; i <= Number; i += 2)
+    int i = 1;
+    while (i <= Number)
     {
         Sum += i;
+        i += 2;
     }
-
+    
     return Sum;
 }
 
