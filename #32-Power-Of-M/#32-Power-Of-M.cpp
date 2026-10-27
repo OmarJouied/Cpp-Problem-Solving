@@ -13,9 +13,11 @@ void ReadNumberAndPower(int& Number, int& Power)
 long PowerOfM(int Number, int Power)
 {
     long PowerResult = 1;
-    for (int i = 1; i <= Power; i++)
+    int i = 1;
+    while (i <= Power)
     {
         PowerResult *= Number;
+        i++;
     }
 
     return PowerResult;
