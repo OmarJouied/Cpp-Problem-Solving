@@ -3,9 +3,11 @@ using namespace std;
 
 void PrintNTo1(int Number)
 {
-    for (int i = Number; i >= 1; i--)
+    int i = Number;
+    while (i >= 1)
     {
         cout << i << endl;
+        i--;
     }
 }
 
