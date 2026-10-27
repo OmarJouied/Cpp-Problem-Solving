@@ -4,11 +4,13 @@ using namespace std;
 long FactorialN(int Number)
 {
     long Factorial = 1;
-    for (int i = 1; i <= Number; i++)
+    int i = 1;
+    while (i <= Number)
     {
         Factorial *= i;
+        i++;
     }
-
+    
     return Factorial;
 }
 
