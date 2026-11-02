@@ -1,13 +1,14 @@
 #include <iostream>
+using namespace std;
 
-void PrintMyName()
+void PrintName(string Name)
 {
-    std::cout << "Omar Jouied" << std::endl;
+    cout << "Your Name is: " << Name << endl;
 }
 
 int main()
 {
-    PrintMyName();
+    PrintName("Omar Jouied");
 
     return 0;
 }
