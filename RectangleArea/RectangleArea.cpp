@@ -1,24 +1,32 @@
 #include <iostream>
 using namespace std;
 
-int calculateRectangleArea(int width, int height)
+void ReadDimensions(float& length, float& width)
 {
-    return width * height;
-}
-
-int main()
-{
-    int length, width, area;
-
     cout << "Enter the Length ?\n";
     cin >> length;
 
     cout << "Enter the width ?\n";
     cin >> width;
+}
 
-    area = calculateRectangleArea(width, length);
+float calculateRectangleArea(float width, float height)
+{
+    return width * height;
+}
 
-    cout << "Rectangle Area = " << area << endl;
+void PrintArea(float Area)
+{
+    cout << "Rectangle Area = " << Area << endl;
+}
+
+int main()
+{
+    float length, width;
+
+    ReadDimensions(length, width);
+
+    PrintArea(calculateRectangleArea(width, length));
 
     return 0;
 }
